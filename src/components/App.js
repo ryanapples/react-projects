@@ -1,7 +1,14 @@
 import React from 'react';
+import Hero from './Hero';
+import GlobalStyles from '../styles/GlobalStyles';
 
 function App() {
-  return <div>React Projects</div>;
+  return (
+    <div>
+      <GlobalStyles />
+      <Hero />
+    </div>
+  );
 }
 
 export default App;
