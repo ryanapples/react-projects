@@ -1,5 +1,7 @@
 import React from 'react';
 import Hero from './Hero';
+import Grid from './Grid';
+
 import GlobalStyles from '../styles/GlobalStyles';
 
 function App() {
@@ -7,6 +9,7 @@ function App() {
     <div>
       <GlobalStyles />
       <Hero />
+      <Grid />
     </div>
   );
 }
