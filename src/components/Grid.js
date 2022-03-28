@@ -1,4 +1,7 @@
 import React from 'react';
+
+import GridItem from './GridItem';
+import constants from '../constants';
 import styled from 'styled-components';
 
 const Section = styled.section`
@@ -14,22 +17,16 @@ const GridContainer = styled.div`
   margin: 0 auto;
 `;
 
-const GridItem = styled.div`
-  text-align: center;
-  padding: 80px 20px;
-  border: 1px solid var(--black);
-  border-radius: 5px;
-`;
-
 function Grid() {
+  const renderGridItems = () => {
+    return constants.map((project, index) => (
+      <GridItem project={project} key={index} />
+    ));
+  };
+
   return (
     <Section>
-      <GridContainer>
-        <GridItem>ryanapples.com</GridItem>
-        <GridItem>Todo List</GridItem>
-        <GridItem>Project 3</GridItem>
-        <GridItem>Test</GridItem>
-      </GridContainer>
+      <GridContainer>{renderGridItems()}</GridContainer>
     </Section>
   );
 }
